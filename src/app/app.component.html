@@ -7,16 +7,34 @@
    
 </mat-chip-listbox> 
 <!-- To be continued to add mat-cards on plus icon click -->
-<button mat-icon-button>
+<button mat-icon-button (click)="add()">
   <mat-icon>add</mat-icon>
 </button>
+<!-- <mat-form-field> -->
 <mat-card>
+  @for (card of cards; track card) {
+    
+         
   <mat-card-content > 
     <form >
       <mat-form-field  appearance="fill" style="width: 100%;">
         <!-- To be done adding chip data to the textarea -->
+        <textarea matInput rows="5" ></textarea>
+      </mat-form-field>
+    </form>
+</mat-card-content>
+  }
+</mat-card>
+<!-- @if (addNotePad) {
+<mat-card >
+  <mat-card-content > 
+    <form >
+      <mat-form-field  appearance="fill" style="width: 100%;">
+      
         <textarea matInput rows="5"></textarea>
       </mat-form-field>
     </form>
 </mat-card-content>
 </mat-card>
+} -->
+<!-- </mat-form-field> -->
